@@ -2,7 +2,6 @@ import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constant/color.dart';
 import '../../../data/datasource/static/static.dart';
 
 class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {

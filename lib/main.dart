@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/core/localization/translation.dart';
 import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/routes.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(

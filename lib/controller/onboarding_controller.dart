@@ -1,4 +1,3 @@
-import 'package:ecommerce_wael/view/screen/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../core/constant/app_routes.dart';
@@ -23,7 +22,7 @@ class OnBoardingControllerImpl extends OnBoardingController {
   next() {
     currentPage++;
     if (currentPage >= onboardingListLength) {
-      Get.offAllNamed(AppRoutes.login);
+      Get.offAllNamed(AppRoutes.language);
     }
     pageController.animateToPage(currentPage,
         duration: const Duration(milliseconds: 900), curve: Curves.easeInOut);
