@@ -3,27 +3,23 @@ import 'package:ecommerce_wael/data/model/onboardingmodel.dart';
 
 List<OnBoardingModel> onboardingList = [
   OnBoardingModel(
-    title: 'first onboarding title',
+    title: 'اول شاشة عرض ',
     image: AppImageAsset.onBoardingImageOne,
-    body:
-        'this is first onboarding description that describe what this app is about \n and how to use it on the long run and so on',
+    body: 'هذه اول شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
   ),
   OnBoardingModel(
-    title: 'second onboarding title',
+    title: 'ثاني شاشة عرض ',
     image: AppImageAsset.onBoardingImageTwo,
-    body:
-        'this is second onboarding description that describe what this app is about \n and how to use it on the long run and so on',
+    body: 'هذه ثاني شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
   ),
   OnBoardingModel(
-    title: 'third onboarding title',
+    title: 'ثالث شاشة عرض ',
     image: AppImageAsset.onBoardingImageThree,
-    body:
-        'this is third onboarding description that describe what this app is about \n and how to use it on the long run and so on',
+    body: 'هذه ثالث شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
   ),
   OnBoardingModel(
-    title: 'fourth onboarding title',
+    title: 'رابع شاشة عرض ',
     image: AppImageAsset.onBoardingImageFour,
-    body:
-        'this is fourth onboarding description that describe what this app is about \n and how to use it on the long run and so on',
+    body: 'هذه رابع شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
   ),
 ];

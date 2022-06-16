@@ -24,10 +24,7 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
             ),
             Text(
               onboardingList[index].title!,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: Theme.of(context).textTheme.headline1,
             ),
             const SizedBox(
               height: 50,
@@ -47,11 +44,7 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
               child: Text(
                 onboardingList[index].body!,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                    fontSize: 16,
-                    height: 2,
-                    color: AppColor.grey,
-                    fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ],

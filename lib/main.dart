@@ -2,6 +2,7 @@ import 'package:ecommerce_wael/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/constant/color.dart';
 import 'view/screen/onboarding.dart';
 
 void main() {
@@ -18,8 +19,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          textTheme: const TextTheme(
+        headline1: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyText1: TextStyle(
+            fontSize: 16,
+            height: 2,
+            color: AppColor.grey,
+            fontWeight: FontWeight.w500),
+      )),
       initialRoute: '/',
       routes: routes,
     );
