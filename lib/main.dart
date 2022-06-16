@@ -1,11 +1,13 @@
+import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'core/constant/color.dart';
-import 'view/screen/onboarding.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initialServices();
   runApp(const MyApp());
 }
 
