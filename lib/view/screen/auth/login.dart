@@ -1,4 +1,6 @@
+import 'package:ecommerce_wael/controller/login_controller.dart';
 import 'package:ecommerce_wael/core/constant/color.dart';
+import 'package:ecommerce_wael/view/widget/auth/custom_sign_up_sign_in_text.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_body_text_auth.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_button_auth.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_title_text_auth.dart';
@@ -6,6 +8,7 @@ import 'package:ecommerce_wael/view/widget/auth/logo_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../widget/auth/custom_sign_up_sign_in_text.dart';
 import '../../widget/auth/custom_text_form_auth.dart';
 
 class Login extends StatelessWidget {
@@ -13,6 +16,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LoginControllerImpl loginController = Get.put(LoginControllerImpl());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -37,18 +41,18 @@ class Login extends StatelessWidget {
                       color: AppColor.grey,
                       fontWeight: FontWeight.w500,
                     )),
-            const CustomBodyTextAuth(
-                text:
-                    "sign in with email and password or continue with social media"),
+            const CustomBodyTextAuth(text: "sign in body"),
             const SizedBox(
               height: 25,
             ),
             CustomTextFormAuth(
+              controller: loginController.emailController,
               hintText: 'enter your email'.tr,
               labelText: 'email'.tr,
               icon: Icons.email_outlined,
             ),
             CustomTextFormAuth(
+              controller: loginController.passwordController,
               hintText: 'enter your password'.tr,
               labelText: 'password'.tr,
               icon: Icons.lock_outline,
@@ -73,28 +77,11 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Don't have an account? "),
-                const SizedBox(
-                  width: 15,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Get.toNamed('/register');
-                  },
-                  child: Text(
-                    "sign up".tr,
-                    style: TextStyle(
-                      color: Colors.blue[600],
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                )
-              ],
-            )
+            const CustomSignUpSignInText(
+              haveAccount: "don't have an account?",
+              text: "sign up",
+              goTo: '/register',
+            ),
           ],
         ),
       ),
