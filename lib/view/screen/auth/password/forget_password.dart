@@ -1,12 +1,11 @@
-import 'package:ecommerce_wael/controller/auth/forget_password_controller.dart';
-import 'package:ecommerce_wael/core/constant/app_routes.dart';
+import 'package:ecommerce_wael/controller/auth/password/forget_password_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/constant/color.dart';
-import '../../widget/auth/custom_body_text_auth.dart';
-import '../../widget/auth/custom_button_auth.dart';
-import '../../widget/auth/custom_text_form_auth.dart';
-import '../../widget/auth/custom_title_text_auth.dart';
+import '../../../../core/constant/color.dart';
+import '../../../widget/auth/custom_body_text_auth.dart';
+import '../../../widget/auth/custom_button_auth.dart';
+import '../../../widget/auth/custom_text_form_auth.dart';
+import '../../../widget/auth/custom_title_text_auth.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
@@ -52,7 +51,7 @@ class ForgetPassword extends StatelessWidget {
             ),
             CustomButtonAuth(
               onPressed: () {
-                Get.toNamed(AppRoutes.verifyCode);
+                registerController.goToVerifyCode();
               },
               text: "check",
             ),

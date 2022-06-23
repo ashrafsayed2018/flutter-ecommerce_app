@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,9 @@ class RegisterControllerImpl extends RegisterController {
   late TextEditingController passwordController;
 
   @override
-  register() {}
+  register() {
+    Get.offNamed(AppRoutes.checkEamil);
+  }
 
   @override
   void onInit() {

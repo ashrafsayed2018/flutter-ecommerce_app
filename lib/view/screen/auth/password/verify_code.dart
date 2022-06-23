@@ -1,10 +1,10 @@
-import 'package:ecommerce_wael/controller/auth/verify_code_controller.dart';
+import 'package:ecommerce_wael/controller/auth/password/verify_code_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import '../../../core/constant/color.dart';
-import '../../widget/auth/custom_body_text_auth.dart';
-import '../../widget/auth/custom_title_text_auth.dart';
+import '../../../../core/constant/color.dart';
+import '../../../widget/auth/custom_body_text_auth.dart';
+import '../../../widget/auth/custom_title_text_auth.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({Key? key}) : super(key: key);

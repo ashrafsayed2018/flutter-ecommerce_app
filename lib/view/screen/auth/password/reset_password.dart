@@ -1,11 +1,11 @@
-import 'package:ecommerce_wael/controller/auth/reset_password_controller.dart';
+import 'package:ecommerce_wael/controller/auth/password/reset_password_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/constant/color.dart';
-import '../../widget/auth/custom_body_text_auth.dart';
-import '../../widget/auth/custom_button_auth.dart';
-import '../../widget/auth/custom_text_form_auth.dart';
-import '../../widget/auth/custom_title_text_auth.dart';
+import '../../../../core/constant/color.dart';
+import '../../../widget/auth/custom_body_text_auth.dart';
+import '../../../widget/auth/custom_button_auth.dart';
+import '../../../widget/auth/custom_text_form_auth.dart';
+import '../../../widget/auth/custom_title_text_auth.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({Key? key}) : super(key: key);
