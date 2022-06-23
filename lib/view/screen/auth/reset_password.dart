@@ -1,8 +1,10 @@
+import 'package:ecommerce_wael/controller/auth/reset_password_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../core/constant/color.dart';
 import '../../widget/auth/custom_body_text_auth.dart';
 import '../../widget/auth/custom_button_auth.dart';
+import '../../widget/auth/custom_text_form_auth.dart';
 import '../../widget/auth/custom_title_text_auth.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -10,8 +12,8 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ForegetPasswordControllerImpl registerController =
-    //     Get.put(ForegetPasswordControllerImpl());
+    ResetPasswordControllerImpl resetPasswordController =
+        Get.put(ResetPasswordControllerImpl());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -29,27 +31,39 @@ class ResetPassword extends StatelessWidget {
         child: ListView(
           children: [
             CustomTitleTextAuth(
-                title: "check email ",
+                title: "reset your password",
                 titleStyle: Theme.of(context).textTheme.headline1!.copyWith(
                       color: AppColor.grey,
                       fontWeight: FontWeight.w500,
                     )),
-            const CustomBodyTextAuth(text: "sign up body"),
+            const CustomBodyTextAuth(text: "reset password body"),
             const SizedBox(
               height: 25,
             ),
-            // CustomTextFormAuth(
-            //   controller: registerController.emailController,
-            //   hintText: 'enter your email'.tr,
-            //   labelText: 'email'.tr,
-            //   icon: Icons.email_outlined,
-            // ),
+            CustomTextFormAuth(
+              controller: resetPasswordController.passwordController,
+              hintText: 'enter new password'.tr,
+              labelText: 'password'.tr,
+              icon: Icons.lock_outline,
+            ),
             const SizedBox(
               height: 10,
             ),
+            CustomTextFormAuth(
+              controller:
+                  resetPasswordController.confiramtionPasswordController,
+              hintText: 'confirm the new password'.tr,
+              labelText: 'password'.tr,
+              icon: Icons.lock_outline,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             CustomButtonAuth(
-              onPressed: () {},
-              text: "check",
+              onPressed: () {
+                resetPasswordController.goToSuccessResetPassword();
+              },
+              text: "save",
             ),
           ],
         ),

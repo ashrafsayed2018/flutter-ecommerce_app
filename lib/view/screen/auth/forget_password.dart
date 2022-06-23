@@ -1,4 +1,5 @@
-import 'package:ecommerce_wael/controller/forgetpassword_controller.dart';
+import 'package:ecommerce_wael/controller/auth/forget_password_controller.dart';
+import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../core/constant/color.dart';
@@ -36,7 +37,7 @@ class ForgetPassword extends StatelessWidget {
                       color: AppColor.grey,
                       fontWeight: FontWeight.w500,
                     )),
-            const CustomBodyTextAuth(text: "sign up body"),
+            const CustomBodyTextAuth(text: "forget password body"),
             const SizedBox(
               height: 25,
             ),
@@ -50,7 +51,9 @@ class ForgetPassword extends StatelessWidget {
               height: 10,
             ),
             CustomButtonAuth(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(AppRoutes.verifyCode);
+              },
               text: "check",
             ),
           ],
