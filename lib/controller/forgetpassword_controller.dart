@@ -2,34 +2,33 @@ import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-abstract class LoginController extends GetxController {
-  login();
-  goToForgetPassword();
+abstract class ForegetPasswordController extends GetxController {
+  checkEmail();
+  goToVerifyCode();
 }
 
-class LoginControllerImpl extends LoginController {
+class ForegetPasswordControllerImpl extends ForegetPasswordController {
   late TextEditingController emailController;
-  late TextEditingController passwordController;
 
   @override
-  login() {}
+  checkEmail() {}
 
   @override
   void onInit() {
     emailController = TextEditingController();
-    passwordController = TextEditingController();
+
     super.onInit();
   }
 
   @override
   void dispose() {
     emailController.dispose();
-    passwordController.dispose();
+
     super.dispose();
   }
 
   @override
-  goToForgetPassword() {
-    Get.toNamed(AppRoutes.forgetPassword);
+  goToVerifyCode() {
+    Get.offNamed(AppRoutes.verifyCode);
   }
 }

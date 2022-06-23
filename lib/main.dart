@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             color: AppColor.grey,
             fontWeight: FontWeight.w500),
       )),
-      initialRoute: AppRoutes.language,
+      initialRoute: AppRoutes.home,
       routes: routes,
     );
   }

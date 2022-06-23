@@ -60,11 +60,16 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Text(
-              "forget password?".tr,
-              style: TextStyle(
-                color: Colors.blue[600],
-                fontSize: 14,
+            InkWell(
+              onTap: () {
+                loginController.goToForgetPassword();
+              },
+              child: Text(
+                "forget password?".tr,
+                style: TextStyle(
+                  color: Colors.blue[600],
+                  fontSize: 14,
+                ),
               ),
             ),
             const SizedBox(
