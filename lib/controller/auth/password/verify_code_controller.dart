@@ -4,7 +4,7 @@ import '../../../core/constant/app_routes.dart';
 
 abstract class VerifyCodeController extends GetxController {
   checkOTPCode();
-  goToResetPassword();
+  goToSuccess();
 }
 
 class VerifyCodeControllerImpl extends VerifyCodeController {
@@ -13,7 +13,7 @@ class VerifyCodeControllerImpl extends VerifyCodeController {
   checkOTPCode() {}
 
   @override
-  goToResetPassword() {
-    Get.offNamed(AppRoutes.resetPassword);
+  goToSuccess() {
+    Get.offNamed(AppRoutes.successSignUp);
   }
 }

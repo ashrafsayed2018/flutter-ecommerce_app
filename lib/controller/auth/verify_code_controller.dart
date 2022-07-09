@@ -2,12 +2,12 @@ import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-abstract class CheckEamilContorller extends GetxController {
+abstract class VerifyCodeController extends GetxController {
   checkEmail();
   goToSuccessRegister();
 }
 
-class CheckEamilContorllerImpl extends CheckEamilContorller {
+class VerifyCodeControllerImpl extends VerifyCodeController {
   late TextEditingController emailController;
 
   @override
@@ -29,6 +29,6 @@ class CheckEamilContorllerImpl extends CheckEamilContorller {
 
   @override
   goToSuccessRegister() {
-    Get.offNamed(AppRoutes.successRegister);
+    Get.offNamed(AppRoutes.successSignUp);
   }
 }

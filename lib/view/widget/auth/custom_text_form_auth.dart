@@ -7,13 +7,21 @@ class CustomTextFormAuth extends StatelessWidget {
   final String hintText;
   final String labelText;
   final IconData icon;
+  final bool isNumber;
+  final bool? obscureText;
   final TextEditingController? controller;
+  final String? Function(String?)? valid;
+  final void Function()? ontTapIcon;
   const CustomTextFormAuth({
     Key? key,
     required this.hintText,
     required this.labelText,
     required this.icon,
     required this.controller,
+    required this.valid,
+    required this.isNumber,
+    this.ontTapIcon,
+    this.obscureText,
   }) : super(key: key);
 
   @override
@@ -21,7 +29,12 @@ class CustomTextFormAuth extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 25),
       child: TextFormField(
+        obscureText: obscureText == null || obscureText == false ? false : true,
+        keyboardType: isNumber
+            ? const TextInputType.numberWithOptions(decimal: true)
+            : TextInputType.text,
         controller: controller,
+        validator: valid,
         decoration: InputDecoration(
           floatingLabelBehavior: FloatingLabelBehavior.always,
           contentPadding:
@@ -29,9 +42,12 @@ class CustomTextFormAuth extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          suffixIcon: Icon(
-            icon,
-            color: AppColor.grey,
+          suffixIcon: InkWell(
+            onTap: ontTapIcon,
+            child: Icon(
+              icon,
+              color: AppColor.grey,
+            ),
           ),
           hintText: hintText.tr,
           hintStyle: const TextStyle(color: AppColor.grey, fontSize: 14),

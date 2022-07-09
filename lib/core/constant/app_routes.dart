@@ -10,5 +10,6 @@ class AppRoutes {
   static const String resetPassword = "/resetpassword";
   static const String successRestPassword = "/successresetpassword";
   static const String checkEamil = "/checkemail";
-  static const String successRegister = '/successregister';
+  static const String successSignUp = '/successsignup';
+  static const String verifyCodeSignUp = '/verifycodesignup';
 }

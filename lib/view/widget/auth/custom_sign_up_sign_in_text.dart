@@ -24,7 +24,7 @@ class CustomSignUpSignInText extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Get.toNamed(goTo);
+            Get.offNamed(goTo);
           },
           child: Text(
             text.tr,

@@ -1,6 +1,5 @@
 import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:ecommerce_wael/test.dart';
-import 'package:ecommerce_wael/view/screen/auth/check_email.dart';
 import 'package:ecommerce_wael/view/screen/auth/password/forget_password.dart';
 import 'package:ecommerce_wael/view/screen/auth/register.dart';
 import 'package:ecommerce_wael/view/screen/auth/password/reset_password.dart';
@@ -11,6 +10,7 @@ import 'package:ecommerce_wael/view/screen/language.dart';
 import 'package:flutter/material.dart';
 
 import 'view/screen/auth/login.dart';
+import 'view/screen/auth/password/verify_code_sign_up.dart';
 import 'view/screen/onboarding.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
@@ -26,8 +26,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoutes.verifyCode: (context) => const VerifyCode(),
   AppRoutes.resetPassword: (context) => const ResetPassword(),
   AppRoutes.successRestPassword: (context) => const SuccessRestPassword(),
-  AppRoutes.checkEamil: (context) => const CheckEamil(),
-  AppRoutes.successRegister: (context) => const SuccessRegister(),
+  AppRoutes.successSignUp: (context) => const SuccessRegister(),
+  AppRoutes.verifyCodeSignUp: (context) => const VerifyCodeSignUp(),
 
   // language route
   AppRoutes.language: (context) => const Language(),

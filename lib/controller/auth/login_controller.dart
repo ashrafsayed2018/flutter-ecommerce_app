@@ -11,8 +11,23 @@ class LoginControllerImpl extends LoginController {
   late TextEditingController emailController;
   late TextEditingController passwordController;
 
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
+  bool isshowPassword = true;
+
+  // toggle show password
+  void toggleShowPassword() {
+    isshowPassword = !isshowPassword;
+    update();
+  }
+
   @override
-  login() {}
+  login() {
+    var formdata = formstate.currentState;
+    if (formdata!.validate()) {
+      Get.offNamed(AppRoutes.verifyCode);
+    }
+  }
 
   @override
   void onInit() {

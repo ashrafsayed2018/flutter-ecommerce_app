@@ -2,6 +2,7 @@ import 'package:ecommerce_wael/controller/auth/password/reset_password_controlle
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/constant/color.dart';
+import '../../../../core/function/validate_input.dart';
 import '../../../widget/auth/custom_body_text_auth.dart';
 import '../../../widget/auth/custom_button_auth.dart';
 import '../../../widget/auth/custom_text_form_auth.dart';
@@ -41,20 +42,30 @@ class ResetPassword extends StatelessWidget {
               height: 25,
             ),
             CustomTextFormAuth(
+              valid: (val) {
+                return validateInput(val!, min, max, "password");
+              },
               controller: resetPasswordController.passwordController,
               hintText: 'enter new password'.tr,
               labelText: 'password'.tr,
               icon: Icons.lock_outline,
+              isNumber: false,
+              obscureText: true,
             ),
             const SizedBox(
               height: 10,
             ),
             CustomTextFormAuth(
+              valid: (val) {
+                return validateInput(val!, min, max, "password");
+              },
               controller:
                   resetPasswordController.confiramtionPasswordController,
               hintText: 'confirm the new password'.tr,
               labelText: 'password'.tr,
               icon: Icons.lock_outline,
+              isNumber: false,
+              obscureText: true,
             ),
             const SizedBox(
               height: 30,

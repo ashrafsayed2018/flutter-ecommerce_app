@@ -34,6 +34,18 @@ class MyTranslation extends Translations {
               'sign in with email and password or continue with social media',
           "sign up body":
               "sign up with email and password or continue with social media",
+          "first screen": "first screen",
+          "first screen body":
+              "This is the first display screen of the application that you can download and use the application throughtout the application",
+          "second screen": "second screen",
+          "second screen body":
+              "This is the second display screen of the application that you can download and use the application throughtout the application",
+          "third screen": "third screen",
+          "third screen body":
+              "This is the third display screen of the application that you can download and use the application throughtout the application",
+          "fourth screen": "fourth screen",
+          "fourth screen body":
+              "This is the fourth display screen of the application that you can download and use the application throughtout the application",
         },
         'ar': {
           'title': 'العربية',
@@ -66,6 +78,18 @@ class MyTranslation extends Translations {
               'تسجيل الدخول ببريد الكتروني وكلمة المرور أو المتابعة باستخدام الحسابات الاجتماعية',
           "sign up body":
               "تسجيل ببريد الكتروني وكلمة المرور أو المتابعة باستخدام الحسابات الاجتماعية",
+          "first screen": "الصفحة الأولى",
+          "first screen body":
+              "هذه اول شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله",
+          "second screen": "الصفحة الثانية",
+          "second screen body":
+              "هذه شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله",
+          "third screen": "الصفحة الثالثة",
+          "third screen body":
+              "هذه شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله",
+          "fourth screen": "الصفحة الرابعة",
+          "fourth screen body":
+              "هذه شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله",
         },
       };
 }

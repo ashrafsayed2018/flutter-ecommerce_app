@@ -1,4 +1,5 @@
 import 'package:ecommerce_wael/controller/onboarding_controller.dart';
+import 'package:ecommerce_wael/core/constant/color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +24,10 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
             ),
             Text(
               onboardingList[index].title!,
-              style: Theme.of(context).textTheme.headline1,
+              style: const TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(
               height: 50,
@@ -43,7 +47,11 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
               child: Text(
                 onboardingList[index].body!,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: const TextStyle(
+                    fontSize: 16,
+                    height: 1.5,
+                    color: AppColor.grey,
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ],

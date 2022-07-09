@@ -1,4 +1,4 @@
-import 'package:ecommerce_wael/core/constant/app_routes.dart';
+import 'package:ecommerce_wael/controller/auth/success_signup_controller.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_button_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +8,8 @@ class SuccessRegister extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -22,26 +24,29 @@ class SuccessRegister extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-        width: double.infinity,
-        child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          const Icon(
-            Icons.check_circle_outline_outlined,
-            size: 160,
-            color: Colors.green,
-          ),
-          const Text("you are successfully registerd "),
-          const Spacer(),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 2 / 3,
-            child: CustomButtonAuth(
-                text: "go to home",
-                onPressed: () {
-                  Get.offNamed(AppRoutes.home);
-                }),
-          )
-        ]),
+      body: GetBuilder<SuccessSignUpControllerImpl>(
+        builder: (successSignUpController) => Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          width: double.infinity,
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            const Icon(
+              Icons.check_circle_outline_outlined,
+              size: 160,
+              color: Colors.green,
+            ),
+            const Text("you are successfully registerd "),
+            const Spacer(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 2 / 3,
+              child: CustomButtonAuth(
+                  text: "go to home",
+                  onPressed: () {
+                    successSignUpController.goToLogin();
+                  }),
+            )
+          ]),
+        ),
       ),
     );
   }

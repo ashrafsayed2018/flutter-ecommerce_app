@@ -11,10 +11,22 @@ class RegisterControllerImpl extends RegisterController {
   late TextEditingController emailController;
   late TextEditingController phoneController;
   late TextEditingController passwordController;
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
+
+  bool isshowPassword = true;
+
+  // toggle show password
+  void toggleShowPassword() {
+    isshowPassword = !isshowPassword;
+    update();
+  }
 
   @override
   register() {
-    Get.offNamed(AppRoutes.checkEamil);
+    var formdata = formstate.currentState;
+    if (formdata!.validate()) {
+      Get.offNamed(AppRoutes.verifyCode);
+    }
   }
 
   @override
@@ -32,6 +44,7 @@ class RegisterControllerImpl extends RegisterController {
     emailController.dispose();
     passwordController.dispose();
     phoneController.dispose();
+
     super.dispose();
   }
 }

@@ -1,25 +1,26 @@
 import 'package:ecommerce_wael/core/constant/imageasset.dart';
 import 'package:ecommerce_wael/data/model/onboardingmodel.dart';
+import 'package:get/get.dart';
 
 List<OnBoardingModel> onboardingList = [
   OnBoardingModel(
-    title: 'اول شاشة عرض ',
+    title: "first screen".tr,
     image: AppImageAsset.onBoardingImageOne,
-    body: 'هذه اول شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
+    body: "first screen body".tr,
   ),
   OnBoardingModel(
-    title: 'ثاني شاشة عرض ',
+    title: "second screen".tr,
     image: AppImageAsset.onBoardingImageTwo,
-    body: 'هذه ثاني شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
+    body: "second screen body".tr,
   ),
   OnBoardingModel(
-    title: 'ثالث شاشة عرض ',
+    title: "third screen".tr,
     image: AppImageAsset.onBoardingImageThree,
-    body: 'هذه ثالث شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
+    body: "third screen body".tr,
   ),
   OnBoardingModel(
-    title: 'رابع شاشة عرض ',
+    title: "fourth screen".tr,
     image: AppImageAsset.onBoardingImageFour,
-    body: 'هذه رابع شاشة عرض للتطبيق يمكنك تحميل التطبيق والاستخدامه من خلاله',
+    body: "fourth screen body".tr,
   ),
 ];
