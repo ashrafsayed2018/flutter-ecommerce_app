@@ -12,10 +12,10 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
   Widget build(BuildContext context) {
     return PageView.builder(
       controller: controller.pageController,
+      itemCount: onboardingList.length,
       onPageChanged: (val) {
         controller.onPageChanged(val);
       },
-      itemCount: onboardingList.length,
       itemBuilder: ((context, index) {
         return Column(
           children: [
@@ -48,10 +48,11 @@ class OnBoardingSlider extends GetView<OnBoardingControllerImpl> {
                 onboardingList[index].body!,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                    fontSize: 16,
-                    height: 1.5,
-                    color: AppColor.grey,
-                    fontWeight: FontWeight.w500),
+                  fontSize: 16,
+                  height: 1.5,
+                  color: AppColor.grey,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
           ],

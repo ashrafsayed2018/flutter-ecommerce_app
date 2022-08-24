@@ -7,14 +7,20 @@ validateInput(String val, int min, int max, String type) {
   // if type username
 
   if (type == 'username') {
-    if (!GetUtils.isUsername(val)) {
+    // alphanumeric
+    bool validCharacters = RegExp(r'^[a-zA-Z0-9]+$').hasMatch(val);
+    if (!validCharacters) {
       return "not valid username";
     }
   }
 
   // if type email
   if (type == 'email') {
-    if (!GetUtils.isEmail(val)) {
+    bool emailValid = RegExp(
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(val);
+
+    if (!emailValid) {
       return "not valid email";
     }
   }

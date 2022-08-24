@@ -1,5 +1,4 @@
 import 'package:ecommerce_wael/binding.dart';
-import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:ecommerce_wael/core/localization/change_locale.dart';
 import 'package:ecommerce_wael/core/localization/translation.dart';
 import 'package:ecommerce_wael/core/services/services.dart';
@@ -15,7 +14,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -24,11 +22,10 @@ class MyApp extends StatelessWidget {
       translations: MyTranslation(),
       locale: localeController.language,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'مشروع فلاتر',
       theme: localeController.apptheme,
       initialBinding: MyBinding(),
-      initialRoute: AppRoutes.home,
-      routes: routes,
+      getPages: routes,
     );
   }
 }

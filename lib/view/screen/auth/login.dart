@@ -24,14 +24,14 @@ class Login extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "login".tr,
-          style: Theme.of(context).textTheme.headline2!.copyWith(
-                color: AppColor.grey,
+          style: Theme.of(context).textTheme.headline4!.copyWith(
+                color: Colors.grey[600],
               ),
         ),
       ),
       body: GetBuilder<LoginControllerImpl>(
         builder: (loginController) => Container(
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
           child: Form(
             key: loginController.formstate,
             child: ListView(

@@ -8,10 +8,16 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
     return Container(
-      padding: const EdgeInsets.all(20),
-      width: double.infinity,
+      width: deviceSize.width * .6,
+      margin: EdgeInsets.symmetric(horizontal: deviceSize.width * .3),
       child: MaterialButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        elevation: 5.0,
+        height: 40,
         onPressed: onPressed,
         color: Theme.of(context).primaryColor,
         textColor: Colors.white,

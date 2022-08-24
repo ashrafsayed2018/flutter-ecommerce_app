@@ -24,7 +24,7 @@ ThemeData themeArabic = ThemeData(
   fontFamily: "Cairo",
   textTheme: const TextTheme(
     headline1: TextStyle(
-      fontSize: 26,
+      fontSize: 30,
       fontWeight: FontWeight.bold,
     ),
     headline2: TextStyle(

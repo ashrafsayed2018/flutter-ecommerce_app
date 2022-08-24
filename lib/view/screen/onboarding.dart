@@ -20,14 +20,15 @@ class OnBoarding extends StatelessWidget {
               child: OnBoardingSlider(),
             ),
             Expanded(
-                flex: 1,
-                child: Column(
-                  children: const [
-                    DotsController(),
-                    SizedBox(height: 20),
-                    CustomButton(),
-                  ],
-                ))
+              flex: 1,
+              child: Column(
+                children: const [
+                  DotsController(),
+                  SizedBox(height: 20),
+                  CustomButton(),
+                ],
+              ),
+            )
           ],
         ),
       ),

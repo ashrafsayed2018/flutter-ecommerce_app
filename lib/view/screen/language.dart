@@ -14,7 +14,12 @@ class Language extends GetView<LocaleController> {
       onWillPop: alertExitApp,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("language".tr),
+          title: Text(
+            "language".tr,
+            style: TextStyle(
+              color: Colors.grey[800],
+            ),
+          ),
         ),
         body: Container(
           padding: const EdgeInsets.all(15),
@@ -23,20 +28,23 @@ class Language extends GetView<LocaleController> {
             children: [
               Text(
                 "choose your language".tr,
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.headline2,
+              ),
+              const SizedBox(
+                height: 40,
               ),
               CustomButton(
                 text: 'عربي',
                 onPressed: () {
                   controller.changeLaguage('ar');
-                  Get.toNamed(AppRoutes.login);
+                  Get.toNamed(AppRoutes.onboarding);
                 },
               ),
               CustomButton(
                 text: 'English',
                 onPressed: () {
                   controller.changeLaguage('en');
-                  Get.toNamed(AppRoutes.login);
+                  Get.toNamed(AppRoutes.onboarding);
                 },
               ),
             ],

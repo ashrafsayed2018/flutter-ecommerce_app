@@ -1,3 +1,4 @@
+import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../core/constant/app_routes.dart';
@@ -18,11 +19,13 @@ class OnBoardingControllerImpl extends OnBoardingController {
   int get onboardingListLength => onboardingList.length;
 
   int currentPage = 0;
+  MyServices myServices = Get.find();
   @override
   next() {
     currentPage++;
-    if (currentPage >= onboardingListLength) {
-      Get.offAllNamed(AppRoutes.language);
+    if (currentPage >= onboardingListLength - 1) {
+      Get.offAllNamed(AppRoutes.login);
+      myServices.sharedPreferences.setBool("onboarding", true);
     }
     pageController.animateToPage(currentPage,
         duration: const Duration(milliseconds: 900), curve: Curves.easeInOut);

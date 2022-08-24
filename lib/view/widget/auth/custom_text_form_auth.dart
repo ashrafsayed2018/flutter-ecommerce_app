@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../core/constant/color.dart';
 
 class CustomTextFormAuth extends StatelessWidget {
