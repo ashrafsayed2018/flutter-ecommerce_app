@@ -6,13 +6,13 @@ const int max = 30;
 validateInput(String val, int min, int max, String type) {
   // if type username
 
-  if (type == 'username') {
-    // alphanumeric
-    bool validCharacters = RegExp(r'^[a-zA-Z0-9]+$').hasMatch(val);
-    if (!validCharacters) {
-      return "not valid username";
-    }
-  }
+  // if (type == 'username') {
+  //   // alphanumeric
+  //   bool validCharacters = RegExp(r'^[a-zA-Z0-9]+$').hasMatch(val);
+  //   if (!validCharacters) {
+  //     return "not valid username";
+  //   }
+  // }
 
   // if type email
   if (type == 'email') {

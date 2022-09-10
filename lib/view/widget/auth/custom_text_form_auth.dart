@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/constant/color.dart';
+import '../../../core/constant/app_color.dart';
 
 class CustomTextFormAuth extends StatelessWidget {
   final String hintText;

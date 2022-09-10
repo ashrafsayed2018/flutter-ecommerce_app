@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391916551664",
+    "project_id": "ecommerce-wael",
+    "storage_bucket": "ecommerce-wael.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391916551664:android:c5c572b7b7748302ceb135",
+        "android_client_info": {
+          "package_name": "com.ashraf1.ecommerce_wael"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391916551664-82pvb7ivsj4qs1sjctojije230n3ic2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashraf1.ecommerce_wael",
+            "certificate_hash": "e1727380bf09759064dc40bd6bf1e4384f46a7b4"
+          }
+        },
+        {
+          "client_id": "391916551664-9cj19api2an05q0e1kbajnlpa3a6ii0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtD_4FtgxFmp6Tb05yNisnbTMQ1fpL8Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391916551664-9cj19api2an05q0e1kbajnlpa3a6ii0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

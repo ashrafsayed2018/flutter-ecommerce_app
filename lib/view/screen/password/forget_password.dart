@@ -4,7 +4,7 @@ import 'package:ecommerce_wael/core/constant/imageasset.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import '../../../../core/constant/color.dart';
+import '../../../core/constant/app_color.dart';
 import '../../../../core/function/validate_input.dart';
 
 import '../../widget/auth/custom_body_text_auth.dart';

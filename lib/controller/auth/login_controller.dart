@@ -1,6 +1,8 @@
 import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:ecommerce_wael/core/function/error_dialog.dart';
+import 'package:ecommerce_wael/core/services/services.dart';
 import 'package:ecommerce_wael/data/datasource/remote/auth/login.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +18,7 @@ class LoginControllerImpl extends LoginController {
   LoginData loginData = LoginData(Get.find());
   late TextEditingController emailController;
   late TextEditingController passwordController;
+  MyServices myServices = Get.find();
 
   StatusRequest? statusRequest;
 
@@ -48,6 +51,12 @@ class LoginControllerImpl extends LoginController {
 
         if (statusRequest == StatusRequest.success) {
           if (response['status'] == "success") {
+            var data = response['data'];
+            myServices.sharedPreferences.setString("id", data['id'].toString());
+            myServices.sharedPreferences.setString("name", data['name']);
+            myServices.sharedPreferences.setString("email", data['email']);
+            myServices.sharedPreferences.setString("phone", data['phone']);
+            myServices.sharedPreferences.setString("step", "2");
             Get.offNamed(AppRoutes.home);
           }
 
@@ -67,6 +76,12 @@ class LoginControllerImpl extends LoginController {
   void onInit() {
     emailController = TextEditingController();
     passwordController = TextEditingController();
+
+    // get the token from firebase
+    FirebaseMessaging.instance.getToken().then((value) {
+      String? token = value;
+    });
+
     super.onInit();
   }
 

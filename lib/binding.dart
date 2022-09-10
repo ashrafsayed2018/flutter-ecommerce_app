@@ -1,6 +1,7 @@
 import 'package:ecommerce_wael/controller/auth/login_controller.dart';
 import 'package:ecommerce_wael/controller/auth/register_controller.dart';
 import 'package:ecommerce_wael/controller/auth/success_signup_controller.dart';
+import 'package:ecommerce_wael/controller/home_controller.dart';
 import 'package:ecommerce_wael/controller/password/verify_code_controller.dart';
 import 'package:ecommerce_wael/controller/password/forget_password_controller.dart';
 import 'package:get/get.dart';
@@ -15,5 +16,6 @@ class MyBinding extends Bindings {
     Get.lazyPut(() => SuccessSignUpControllerImpl(), fenix: true);
     Get.lazyPut(() => ForegetPasswordControllerImpl());
     Get.lazyPut(() => Crud(), fenix: true);
+    Get.lazyPut(() => HomeControllerImpl(), fenix: true);
   }
 }

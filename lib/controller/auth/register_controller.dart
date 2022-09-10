@@ -56,7 +56,7 @@ class RegisterControllerImpl extends RegisterController {
 
         update();
       } else {
-        errorDialog(response['message']);
+        errorDialog("خطا");
         update();
       }
     }

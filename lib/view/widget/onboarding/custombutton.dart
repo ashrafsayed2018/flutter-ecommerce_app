@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controller/onboarding_controller.dart';
-import '../../../core/constant/color.dart';
+import '../../../core/constant/app_color.dart';
 
 class CustomButton extends GetView<OnBoardingControllerImpl> {
   const CustomButton({Key? key}) : super(key: key);

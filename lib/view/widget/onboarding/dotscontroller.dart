@@ -2,7 +2,7 @@ import 'package:ecommerce_wael/controller/onboarding_controller.dart';
 import 'package:ecommerce_wael/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../core/constant/color.dart';
+import '../../../core/constant/app_color.dart';
 
 class DotsController extends StatelessWidget {
   const DotsController({Key? key}) : super(key: key);

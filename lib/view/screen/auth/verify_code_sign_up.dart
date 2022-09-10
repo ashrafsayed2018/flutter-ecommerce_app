@@ -4,7 +4,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import '../../../core/class/status_request.dart';
-import '../../../core/constant/color.dart';
+import '../../../core/constant/app_color.dart';
 import '../../../core/constant/imageasset.dart';
 import '../../widget/auth/custom_body_text_auth.dart';
 import '../../widget/auth/custom_title_text_auth.dart';

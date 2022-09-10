@@ -1,5 +1,5 @@
 import 'package:ecommerce_wael/controller/auth/login_controller.dart';
-import 'package:ecommerce_wael/core/constant/color.dart';
+import 'package:ecommerce_wael/core/constant/app_color.dart';
 import 'package:ecommerce_wael/core/function/validate_input.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_sign_up_sign_in_text.dart';
 import 'package:ecommerce_wael/view/widget/auth/custom_body_text_auth.dart';

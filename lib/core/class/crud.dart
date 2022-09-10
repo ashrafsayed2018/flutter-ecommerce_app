@@ -32,7 +32,10 @@ class Crud {
   Future<Either<StatusRequest, Map>> getData(String linkUrl) async {
     try {
       if (await checkInternet()) {
-        var response = await http.get(Uri.parse(linkUrl));
+        var response = await http.get(Uri.parse(linkUrl), headers: {
+          "Content-Type": "application/json",
+          "Connection": "Keep-Alive",
+        });
 
         if (response.statusCode == 200 || response.statusCode == 201) {
           Map responseBody = jsonDecode(response.body);
