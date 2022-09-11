@@ -4,7 +4,7 @@ class CategoryModel {
   String? arName;
   String? image;
   String? createdAt;
-  DateTime? updatedAt;
+  String? updatedAt;
 
   CategoryModel({
     this.id,
