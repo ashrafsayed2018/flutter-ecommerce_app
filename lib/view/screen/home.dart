@@ -15,41 +15,35 @@ class Home extends StatelessWidget {
     Get.put(HomeControllerImpl());
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
-        body: GetBuilder<HomeControllerImpl>(
-          builder: (homeController) {
-            return SizedBox(
-              child: ListView(
-                children: [
-                  CustomAppbar(
-                    hintText: "ابحث عن منتج",
-                    onPressedNotification: () {},
-                    onPressedSearch: () {},
-                  ),
-                  const CustomCard(
-                    title: "عروض الصيف",
-                    body: "% خصم 25",
-                  ),
-                  const CustomTitle(title: "الاقسام"),
-                  CategoriesList(
-                    homeController: homeController,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const CustomTitle(title: "منتجات مقترحه لك"),
-                  ItemsList(homeController: homeController),
-                  const CustomTitle(title: "اخر العروض الحاليه"),
-                  ItemsList(homeController: homeController),
-                ],
-              ),
-            );
-          },
-        ),
+      child: GetBuilder<HomeControllerImpl>(
+        builder: (homeController) {
+          return SizedBox(
+            child: ListView(
+              children: [
+                CustomAppbar(
+                  hintText: "ابحث عن منتج",
+                  onPressedNotification: () {},
+                  onPressedSearch: () {},
+                ),
+                const CustomCard(
+                  title: "عروض الصيف",
+                  body: "% خصم 25",
+                ),
+                const CustomTitle(title: "الاقسام"),
+                CategoriesList(
+                  homeController: homeController,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const CustomTitle(title: "منتجات مقترحه لك"),
+                ItemsList(homeController: homeController),
+                const CustomTitle(title: "اخر العروض الحاليه"),
+                ItemsList(homeController: homeController),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
