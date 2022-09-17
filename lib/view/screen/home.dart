@@ -1,6 +1,6 @@
 import 'package:ecommerce_wael/controller/home_controller.dart';
 import 'package:ecommerce_wael/view/widget/home/categories_list.dart';
-import 'package:ecommerce_wael/view/widget/home/custom_appbar.dart';
+import 'package:ecommerce_wael/view/widget/custom_appbar.dart';
 import 'package:ecommerce_wael/view/widget/home/custom_card.dart';
 import 'package:ecommerce_wael/view/widget/home/custom_title.dart';
 import 'package:ecommerce_wael/view/widget/home/items_list.dart';

@@ -23,7 +23,7 @@ class CustomAppbarButton extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: isActive == true ? AppColor.primary : Colors.black,
+            color: isActive == true ? AppColor.primary : AppColor.grey2,
           ),
           Text(
             title,
@@ -31,7 +31,7 @@ class CustomAppbarButton extends StatelessWidget {
                 fontSize: isActive == true ? 14 : 12,
                 fontWeight:
                     isActive == true ? FontWeight.bold : FontWeight.normal,
-                color: isActive == true ? AppColor.primary : Colors.black),
+                color: isActive == true ? AppColor.primary : AppColor.grey2),
           ),
         ],
       ),

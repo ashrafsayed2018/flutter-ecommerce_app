@@ -2,6 +2,7 @@ import 'package:ecommerce_wael/core/constant/app_routes.dart';
 import 'package:ecommerce_wael/view/screen/auth/register.dart';
 import 'package:ecommerce_wael/view/screen/auth/success_register.dart';
 import 'package:ecommerce_wael/view/screen/home_screen.dart';
+import 'package:ecommerce_wael/view/screen/items.dart';
 import 'package:ecommerce_wael/view/screen/language.dart';
 import 'package:ecommerce_wael/view/screen/password/forget_password.dart';
 import 'package:ecommerce_wael/view/screen/password/reset_password.dart';
@@ -33,5 +34,5 @@ List<GetPage<dynamic>>? routes = [
       name: AppRoutes.verifyCodeSignUp, page: () => const VerifyCodeSignUp()),
   GetPage(name: AppRoutes.language, page: () => const Language()),
   GetPage(name: AppRoutes.onboarding, page: () => const OnBoarding()),
-  // GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
+  GetPage(name: AppRoutes.itemsScreen, page: () => const ItemsScreen()),
 ];
